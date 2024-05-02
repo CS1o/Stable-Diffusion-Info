@@ -5,6 +5,7 @@ On this Site you'll find everything you need to know about Stable Diffusion Webu
 
 ## This Site is under Construction! More to come soon! ##
 
+To the [Installation Guides](https://github.com/CS1o/Stable-Diffusion-Info/wiki/Installation-Guides)
 
 
 ## Support Me:<br>
