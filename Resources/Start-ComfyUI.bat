@@ -23,19 +23,15 @@ IF NOT EXIST "venv" (
     REM Install torch, torchvision, and torchaudio with specific index URL
     echo Installing torch, torchvision, and torchaudio...
     pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-
-    REM Deactivate the virtual environment
-    echo Deactivating virtual environment...
-    deactivate
 ) ELSE (
     REM Activate the virtual environment
     echo Activating virtual environment...
     call venv\Scripts\activate
 )
 
-REM Run the main.py script
-echo Running main.py...
-python main.py
+REM Run the main.py script with --auto-launch argument
+echo Running main.py with --auto-launch argument...
+python main.py --auto-launch
 
 REM Deactivate the virtual environment
 echo Deactivating virtual environment...
