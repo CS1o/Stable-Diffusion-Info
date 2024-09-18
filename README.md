@@ -5,7 +5,8 @@ On this Site you'll find everything you need to know about Stable Diffusion Webu
 
 ## Guides: ##
 
-To the [Installation Guides](https://github.com/CS1o/Stable-Diffusion-Info/wiki/Webui-Installation-Guides)
+To the [Webui Installation Guides](https://github.com/CS1o/Stable-Diffusion-Info/wiki/Webui-Installation-Guides)
+To the [Lora Trainer Setup Guides](https://github.com/CS1o/Stable-Diffusion-Info/wiki/Lora-Trainer-Setup-Guides)
 
 
 ## Support Me:<br>
