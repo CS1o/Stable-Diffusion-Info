@@ -22,7 +22,7 @@ IF NOT EXIST "venv" (
 
     REM Install torch, torchvision, and torchaudio with specific index URL
     echo Installing torch, torchvision, and torchaudio...
-    pip install torch==2.3.0 torchvision==0.18.0 torchaudio==2.3.0 --index-url https://download.pytorch.org/whl/cu118
+    pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cu118
 ) ELSE (
     REM Activate the virtual environment
     echo Activating virtual environment...
