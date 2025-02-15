@@ -30,8 +30,8 @@ IF NOT EXIST "venv" (
 )
 
 REM Run the main.py script with --auto-launch --directml argument
-echo Running main.py with --auto-launch --directml argument...
-python main.py --auto-launch --directml
+echo Running main.py with --auto-launch --directml --use-quad-cross-attention arguments...
+python main.py --auto-launch --directml --use-quad-cross-attention
 
 REM Deactivate the virtual environment
 echo Deactivating virtual environment...
