@@ -30,8 +30,8 @@ IF NOT EXIST "venv" (
 )
 
 REM Run the main.py script with --auto-launch argument
-echo Running main.py with --auto-launch argument...
-python main.py --auto-launch --disable-xformers --use-quad-cross-attention
+echo Running main.py with --auto-launch --disable-xformers --use-quad-cross-attention --reserve-vram arguments...
+python main.py --auto-launch --disable-xformers --use-quad-cross-attention --reserve-vram 0.8
 
 REM Deactivate the virtual environment
 echo Deactivating virtual environment...
