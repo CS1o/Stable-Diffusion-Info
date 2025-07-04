@@ -1,40 +1,26 @@
 @echo off
-REM Start-FluxGym.bat
-
-REM Set working directory to the script's location
-cd /d %~dp0
-
 REM Check if virtual environment exists
-IF NOT EXIST "env\" (
+IF NOT EXIST "venv\" (
     echo Creating virtual environment...
-    python -m venv env
-)
+    python -m venv venv
 
-REM Activate virtual environment
-call env\Scripts\activate
+    echo Activating virtual environment...
+    call venv\Scripts\activate
 
-REM Install dependencies for sd-scripts
-IF EXIST "sd-scripts\requirements.txt" (
-    echo Installing sd-scripts dependencies...
+    echo Installing requirements in sd-scripts...
     cd sd-scripts
     pip install -r requirements.txt
+
+    echo Installing root requirements...
     cd ..
+    pip install -r requirements.txt
+
+    echo Installing specific PyTorch version...
+    pip install torch==2.3.1 torchvision --index-url https://download.pytorch.org/whl/cu121
 ) ELSE (
-    echo ERROR: sd-scripts directory or requirements.txt not found.
-    exit /b 1
+    echo Virtual environment already exists. Skipping setup...
+    call venv\Scripts\activate
 )
-
-REM Install FluxGym dependencies
-echo Installing FluxGym app dependencies...
-pip install -r requirements.txt
-
-REM Install specific PyTorch version 2.3.1 (CUDA 12.1)
-echo Installing PyTorch 2.3.1 (CUDA 12.1)...
-pip install torch==2.3.1 torchvision==0.14.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cu121
-
-REM Uncomment below if you need the RTX 50xx (CUDA 12.8) version instead
-REM echo Installing PyTorch 2.7.0 (CUDA 12.8) for RTX 50xx GPUs...
-REM pip install torch==2.7.0 torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128 && pip install -U bitsandbytes
 
 REM Launch the application
 echo Launching FluxGym...
