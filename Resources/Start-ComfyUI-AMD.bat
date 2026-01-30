@@ -10,3 +10,4 @@ set TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL=1
 
 REM Launch args
 python main.py --auto-launch --use-pytorch-cross-attention --disable-smart-memory --bf16-vae
+
